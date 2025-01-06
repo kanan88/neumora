@@ -3,8 +3,17 @@ import { useState } from "react";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
 
-const FaqItem = ({ item, index }) => {
-  const [activeId, setActiveId] = useState(null);
+interface FaqItemProps {
+  item: {
+    id: string;
+    question: string;
+    answer: string;
+  };
+  index: number;
+}
+
+const FaqItem = ({ item, index }: FaqItemProps) => {
+  const [activeId, setActiveId] = useState<string | null>(null);
   const active = activeId === item.id;
 
   return (
