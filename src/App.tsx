@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next";
 import Download from "./sections/Download";
 import Faq from "./sections/Faq";
 import Features from "./sections/Features";
@@ -19,7 +18,6 @@ const App = () => {
       <Testimonials />
       <Download />
       <Footer />
-      <Analytics />
     </main>
   );
 };
